@@ -1,0 +1,41 @@
+.text-result {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.suggest-wrap {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+
+    .item-suggest {
+        border-top: 1px solid #ddd;
+        display: flex;
+        padding: 10px;
+
+        .image {
+            width: 13%;
+            margin-right: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .info {
+            p {
+                font-size: 15px;
+                font-weight: 500;
+                color: #000;
+            }
+
+            span {
+                font-size: 15px;
+                color: rgb(216, 94, 94);
+                font-weight: 500;
+            }
+        }
+    }
+}

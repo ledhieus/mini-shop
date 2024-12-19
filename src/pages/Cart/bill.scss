@@ -1,0 +1,35 @@
+.bill{
+    &__listItem{
+        display: flex;
+        .img-item{
+            margin-right: 10px;
+            width: 10%;
+            img{
+                width: 100%;
+            }
+        }
+        .info-item{
+            p{
+                margin: 0;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .size-quantity{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &__infoClient{
+        display: flex;
+        flex-direction: column;
+        span{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}

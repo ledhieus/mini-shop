@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import AllRoute from "./components/AllRoute";
+import "./App.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useEffect } from "react";
+import { generateToken } from "./helper/generateToken";
 function App() {
+  useEffect(()=> {
+    if(!localStorage.getItem('user_token')){
+      const token = generateToken()
+      localStorage.setItem('user_token', token);
+    }
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AllRoute/>
+    </>
   );
 }
 

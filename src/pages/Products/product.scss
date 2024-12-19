@@ -1,0 +1,178 @@
+.detail-product {
+    padding: 20px 20px;
+
+    &__title {
+        font-size: 26px;
+        margin: 0;
+    }
+
+    &__brand {
+        display: flex;
+
+        p {
+            margin-right: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+
+            span {
+                color: #007BFF;
+            }
+        }
+    }
+
+    &__price {
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 10px;
+        color: #007BFF;
+        font-weight: 500;
+    }
+
+    &__discount {
+        border: 2px dashed #007BFF;
+        padding: 20px 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        position: relative;
+
+        li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .sign {
+            color: #007BFF;
+            font-weight: 500;
+            background-color: #fff;
+            position: absolute;
+            top: -26px;
+            left: 17px;
+            padding: 10px;
+            font-size: 16px;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__size {
+        margin-bottom: 20px;
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+
+            span {
+                font-size: 18;
+                font-weight: 500;
+            }
+        }
+        
+        button {
+            padding: 8px 12px;
+            background-color: #fff;
+            color: #000;
+            border: 1px #ddd solid;
+            margin-right: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            &.active{
+                border: 1px #000 solid;
+            }
+        }
+    }
+
+    &__input {
+        display: flex;
+        margin-bottom: 20px;
+        .input {
+            border: 1px #ddd solid;
+            padding: 8px;
+            border-radius: 8px;
+            margin-right: 18px;
+            .input-bt {
+                font-size: 16px;
+                padding: 8px 12px;
+                background-color: #fff;
+                color: #000;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: #dddddd6e;
+                }
+            }
+            input{
+                border: none;
+                text-align: center;
+                width: 80px;
+            }
+        }
+
+        button {
+            flex: 1;
+            border-radius: 8px;
+            background-color: #fff;
+            border: 1px #007BFF solid;
+            color: #007BFF;
+            font-size: 16px;
+            &:hover{
+                background-color: #007BFF;
+                color: #fff;
+            }
+        }
+    }
+    &__buynow{
+        width: 100%;
+        background-color: #155BF6;
+        color: #fff;
+        padding: 16px 8px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover{
+            background-color: #007BFF;
+            color: #fff;
+        }
+    }
+    &__hotline{
+        font-size: 16px;
+        text-align: center;
+        span{
+            font-weight: 500;
+        }
+    }
+    &__policy{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px #ddd solid;
+        padding: 10px;
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            font-size: 14px;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+    .ant-collapse-header-text{
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .ant-collapse-header {
+        background-color: #fff;
+    }
+    .ant-collapse-content-box{
+        background-color: #fff;
+    }
+}
+
+.image-product{
+    padding: 20px 0;
+}
+

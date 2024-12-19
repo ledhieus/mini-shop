@@ -1,0 +1,135 @@
+.header-search {
+    padding: 0 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    z-index: 1002;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transform: translateY(-120px);
+
+    &.visible {
+        transform: translateY(0); // Hiện ra
+        opacity: 1;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        width: 100%;
+
+        &__logo {
+            width: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+
+                @media (max-width: 992px) {
+                    margin-left: 25px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                width: 110px;
+            }
+
+        }
+
+        .search-input {
+            border: 1px solid #000;
+            padding: 3px 4px;
+            width: 500px;
+            display: flex;
+            border-radius: 25px;
+
+            input {
+                border: none;
+                width: 100%;
+                margin-left: 7px;
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                background-color: #000;
+                border: none;
+                color: #fff;
+                font-size: 16px;
+                padding: 10px 20px;
+                border-radius: 18px;
+                cursor: pointer;
+            }
+        }
+
+        &__action {
+
+            ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-right: 20px;
+                    font-weight: 400;
+                    font-size: 22px;
+
+                    @media (max-width: 576px) {
+                        margin-right: 10px;
+                        font-weight: 400;
+                        font-size: 20px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .none {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.result-search{
+    position: absolute;
+    border-radius: 10px;
+    top: 75px;
+    left: 680px;
+    z-index: 1005;
+    padding: 15px 0px;
+    width: 500px;
+    background-color: #fff;
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    &.active{
+        opacity: 1;
+    }
+}
+
+.overlay-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1004;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.5s ease-in-out; 
+  
+    &.visible {
+      opacity: 1; 
+      visibility: visible; 
+    }
+  }

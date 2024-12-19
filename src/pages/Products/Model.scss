@@ -1,0 +1,51 @@
+.model-wrap{
+    display: flex;
+    .img{
+        padding: 20px 10px;
+        width: 40%;
+        img{
+            width: 100%;
+            height: auto;
+        object-fit: cover;
+        }
+        
+        
+    }
+    .info{
+        padding: 20px 10px;
+        &__title{
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0;
+        }
+        .wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__price{
+            margin: 0;
+            font-weight: 500px;
+        }
+    }
+}
+.modal-button{
+    display: flex;
+    justify-content: flex-end;
+    .button{
+        padding: 10px 30px;
+        border-radius: 8px;
+        border: 1px solid #000;
+        margin-left: 10px;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+    .button__cancel{
+        background-color: #fff;
+        color: #000;
+        &:hover{
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}

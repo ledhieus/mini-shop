@@ -1,0 +1,159 @@
+.layout-default{
+    padding: 0 8%;
+    background-color: #fff;
+    .container{
+        background-color: #fff;
+    }
+    @media (max-width: 1200px) {
+        padding: 0 4%
+    }
+    @media (max-width: 992px) {
+        padding: 0 2%
+    }
+}
+.header-wrap {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    margin: 0;
+    justify-content: center;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        width: 100%;
+        &__logo {
+            width: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img {
+                width: 100%;
+                @media (max-width: 992px) {
+                    margin-left: 25px;
+                }
+            }
+            @media (max-width: 576px) {
+                width: 110px;
+            }
+            
+        }
+
+        &__menu-bar {
+            font-size: 22px;
+            display: none;
+            @media (max-width: 992px) {
+                display: block;
+                cursor: pointer;
+            }
+            @media (max-width: 576px) {
+                font-size: 20px;
+            }
+        }
+
+        &__menu {
+            ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    position: relative;
+                    margin-right: 20px;
+
+                    a {
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: #000;
+                        text-decoration: none;
+                        .ant-space-item .anticon{
+                            font-size: 14px;
+                        }
+
+                        @media (max-width: 1200px) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    &:hover::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px; // Độ dày đường gạch dưới
+                        background-color: #333; // Màu của đường gạch dưới
+                        transition: width 0.3s ease;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        width: 0;
+                        height: 2px; // Độ dày của đường gạch dưới
+                        background-color: #333; // Màu sắc của đường gạch dưới
+                        transition: width 0.3s ease;
+                    }
+                }
+
+            }
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+
+        }
+
+        &__action {
+
+            ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                li {
+                    margin-right: 20px;
+                    font-weight: 400;
+                    font-size: 22px;
+                    @media (max-width: 576px) {
+                        margin-right: 10px;
+                        font-weight: 400;
+                        font-size: 20px;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .none{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.ant-badge{
+    font-size: 22px;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Độ mờ */
+    z-index: 1001;
+    opacity: 0; /* Ban đầu ẩn */
+    visibility: hidden; /* Ẩn để không tương tác */
+    transition: opacity 0.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi */
+  
+    &.visible {
+      opacity: 1; /* Hiện lên */
+      visibility: visible; /* Hiện để cho phép tương tác */
+    }
+  }
